@@ -6,6 +6,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  Bolsa de Valores
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let stock of stocks; let i = index">
+      <ion-avatar item-start>
+        <img [src]="stock.logo_url">
+      </ion-avatar>
+      <h2>{{ stock.shortName }} - {{ stock.industry }}</h2>
+      <p>R$ {{ stock.bid }}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>
