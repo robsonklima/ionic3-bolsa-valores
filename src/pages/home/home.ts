@@ -9,6 +9,7 @@ import { Stock } from '../../models/stock';
 })
 export class HomePage {
   stocks: Stock[] = [];
+  lastUpdated: any;
 
   constructor(
     private pyAnywhere: PyAnywhere
